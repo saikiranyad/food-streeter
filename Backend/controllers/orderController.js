@@ -5,7 +5,7 @@ import orderModel from '../models/orderModel.js';
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 const placeorder =  async(req,res)=>{
-    const frontend_url = 'http://localhost:5173'
+    const frontend_url = 'https://food-streeter-frontend.onrender.com'
       try{
         const newOrder = new orderModel({
             userId:req.body.userId,
